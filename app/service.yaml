@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: myweb1
+spec:
+  type: ClusterIP
+  selector:
+    app: myweb1
+  ports:
+  - name: http
+    port: 8080
+    targetPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: myweb2
+spec:
+  type: ClusterIP
+  selector:
+    app: myweb2
+  ports:
+  - name: http
+    port: 8080
+    targetPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: myweb3
+spec:
+  type: ClusterIP
+  selector:
+    app: myweb3
+  ports:
+  - name: http
+    port: 8080
+    targetPort: 80

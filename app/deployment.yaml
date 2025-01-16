@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myweb1
+  labels:
+    app: myweb1
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: myweb1
+  template:
+    metadata:
+      labels:
+        app: myweb1
+    spec:
+      containers:
+      - name: myweb1
+        image: pushdown99/myweb1:latest
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myweb2
+  labels:
+    app: myweb2
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: myweb2
+  template:
+    metadata:
+      labels:
+        app: myweb2
+    spec:
+      containers:
+      - name: myweb2
+        image: pushdown99/myweb2:latest
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myweb3
+  labels:
+    app: myweb3
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: myweb3
+  template:
+    metadata:
+      labels:
+        app: myweb3
+    spec:
+      containers:
+      - name: myweb3
+        image: pushdown99/myweb3:latest
