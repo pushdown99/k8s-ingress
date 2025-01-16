@@ -33,6 +33,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: myweb2
+            name: myweb3
             port:
               number: 8080
