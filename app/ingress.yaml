@@ -12,7 +12,7 @@ spec:
       port:
         number: 8080
   rules:
-  - host: local.domain
+  - host: ingress.domain
     http:
       paths:
       - path: /1
